@@ -1,0 +1,57 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132522",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "template",
+  "fields": [
+    {
+      "fieldName": "templateName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Template",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "templateCompany",
+      "relationshipName": "company",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "templateField",
+      "otherEntityRelationshipName": "template",
+      "ownerSide": true,
+      "relationshipName": "templateField",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "defaultTemplate",
+      "relationshipName": "projectDefaulttemplate",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testCase",
+      "otherEntityRelationshipName": "template",
+      "relationshipName": "testcaseTemplate",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

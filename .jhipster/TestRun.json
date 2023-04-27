@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132532",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_run",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestRun",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testLevel",
+      "otherEntityRelationshipName": "testrunTestlevel",
+      "relationshipName": "testLevel",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "testrunMilestone",
+      "relationshipName": "mileStone",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testRunDetails",
+      "otherEntityRelationshipName": "testRun",
+      "relationshipName": "testrundetailsTestrun",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

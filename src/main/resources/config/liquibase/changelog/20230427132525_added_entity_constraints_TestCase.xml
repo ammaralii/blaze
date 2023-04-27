@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestCase.
+    -->
+    <changeSet id="20230427132525-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="test_suite_id"
+                                 baseTableName="test_case"
+                                 constraintName="fk_test_case__test_suite_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_suite"/>
+
+        <addForeignKeyConstraint baseColumnNames="section_id"
+                                 baseTableName="test_case"
+                                 constraintName="fk_test_case__section_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="section"/>
+
+        <addForeignKeyConstraint baseColumnNames="priority_id"
+                                 baseTableName="test_case"
+                                 constraintName="fk_test_case__priority_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_case_priority"/>
+
+        <addForeignKeyConstraint baseColumnNames="template_id"
+                                 baseTableName="test_case"
+                                 constraintName="fk_test_case__template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template"/>
+
+        <addForeignKeyConstraint baseColumnNames="milestone_id"
+                                 baseTableName="test_case"
+                                 constraintName="fk_test_case__milestone_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="milestone"/>
+
+        <addForeignKeyConstraint baseColumnNames="test_case_id"
+                                 baseTableName="rel_test_case__test_level"
+                                 constraintName="fk_rel_test_case__test_level__test_case_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_case"/>
+
+        <addForeignKeyConstraint baseColumnNames="test_level_id"
+                                 baseTableName="rel_test_case__test_level"
+                                 constraintName="fk_rel_test_case__test_level__test_level_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_level"/>
+    </changeSet>
+</databaseChangeLog>

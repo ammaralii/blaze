@@ -1,0 +1,86 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132519",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project",
+  "fields": [
+    {
+      "fieldName": "projectName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Project",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "template",
+      "otherEntityRelationshipName": "projectDefaulttemplate",
+      "relationshipName": "defaultTemplate",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "projectCompany",
+      "relationshipName": "company",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "milestoneProject",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testPlan",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "testplanProject",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testSuite",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "testsuiteProject",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "project",
+      "ownerSide": false,
+      "relationshipName": "user",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

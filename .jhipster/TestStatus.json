@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132537",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_status",
+  "fields": [
+    {
+      "fieldName": "statusName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestStatus",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testRunDetails",
+      "otherEntityRelationshipName": "status",
+      "relationshipName": "testrundetailsStatus",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testRunStepDetails",
+      "otherEntityRelationshipName": "status",
+      "relationshipName": "testrunstepdetailsStatus",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

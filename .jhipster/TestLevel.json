@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132530",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_level",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestLevel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testRun",
+      "otherEntityRelationshipName": "testLevel",
+      "relationshipName": "testrunTestlevel",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testCase",
+      "otherEntityRelationshipName": "testLevel",
+      "ownerSide": false,
+      "relationshipName": "testCase",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

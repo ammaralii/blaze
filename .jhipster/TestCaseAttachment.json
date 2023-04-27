@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132526",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_case_attachment",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestCaseAttachment",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testCase",
+      "otherEntityRelationshipName": "testcaseattachmentTestcase",
+      "relationshipName": "testCase",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

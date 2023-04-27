@@ -1,0 +1,77 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132517",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "milestone",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    },
+    {
+      "fieldName": "reference",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isCompleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Milestone",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "milestoneParentmilestone",
+      "relationshipName": "parentMilestone",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "milestoneProject",
+      "relationshipName": "project",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "parentMilestone",
+      "relationshipName": "milestoneParentmilestone",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testCase",
+      "otherEntityRelationshipName": "milestone",
+      "relationshipName": "testcaseMilestone",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testRun",
+      "otherEntityRelationshipName": "mileStone",
+      "relationshipName": "testrunMilestone",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
