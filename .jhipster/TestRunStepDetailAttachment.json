@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132535",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_run_step_detail_attachment",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestRunStepDetailAttachment",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testRunStepDetails",
+      "otherEntityRelationshipName": "testrunstepdetailattachmentTestrunstepdetail",
+      "relationshipName": "testRunStepDetail",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

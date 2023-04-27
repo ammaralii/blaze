@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132518",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "permission",
+  "fields": [
+    {
+      "fieldName": "permissionName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Permission",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "role",
+      "otherEntityRelationshipName": "permission",
+      "ownerSide": false,
+      "relationshipName": "role",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

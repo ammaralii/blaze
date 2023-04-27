@@ -11,7 +11,49 @@
     <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132515_added_entity_ApplicationUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132516_added_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132517_added_entity_Milestone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132518_added_entity_Permission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132519_added_entity_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132520_added_entity_Role.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132521_added_entity_Section.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132522_added_entity_Template.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132523_added_entity_TemplateField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132524_added_entity_TemplateFieldType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132525_added_entity_TestCase.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132526_added_entity_TestCaseAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132527_added_entity_TestCaseField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132528_added_entity_TestCaseFieldAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132529_added_entity_TestCasePriority.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132530_added_entity_TestLevel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132531_added_entity_TestPlan.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132532_added_entity_TestRun.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132533_added_entity_TestRunDetailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132534_added_entity_TestRunDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132535_added_entity_TestRunStepDetailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132536_added_entity_TestRunStepDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132537_added_entity_TestStatus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132538_added_entity_TestSuite.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230427132515_added_entity_constraints_ApplicationUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132517_added_entity_constraints_Milestone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132519_added_entity_constraints_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132520_added_entity_constraints_Role.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132521_added_entity_constraints_Section.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132522_added_entity_constraints_Template.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132523_added_entity_constraints_TemplateField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132525_added_entity_constraints_TestCase.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132526_added_entity_constraints_TestCaseAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132527_added_entity_constraints_TestCaseField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132528_added_entity_constraints_TestCaseFieldAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132531_added_entity_constraints_TestPlan.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132532_added_entity_constraints_TestRun.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132533_added_entity_constraints_TestRunDetailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132534_added_entity_constraints_TestRunDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132535_added_entity_constraints_TestRunStepDetailAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132536_added_entity_constraints_TestRunStepDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230427132538_added_entity_constraints_TestSuite.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

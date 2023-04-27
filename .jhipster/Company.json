@@ -1,0 +1,67 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132516",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "company",
+  "fields": [
+    {
+      "fieldName": "country",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "companyAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    },
+    {
+      "fieldName": "organization",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "expectedNoOfUsers",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Company",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "company",
+      "relationshipName": "applicationuserCompany",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "company",
+      "relationshipName": "projectCompany",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "template",
+      "otherEntityRelationshipName": "company",
+      "relationshipName": "templateCompany",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "templateField",
+      "otherEntityRelationshipName": "company",
+      "relationshipName": "templatefieldCompany",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

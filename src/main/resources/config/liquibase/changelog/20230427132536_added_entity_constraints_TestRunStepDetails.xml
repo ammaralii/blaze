@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestRunStepDetails.
+    -->
+    <changeSet id="20230427132536-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="test_run_detail_id"
+                                 baseTableName="test_run_step_details"
+                                 constraintName="fk_test_run_step_details__test_run_detail_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_run_details"/>
+
+        <addForeignKeyConstraint baseColumnNames="step_detail_id"
+                                 baseTableName="test_run_step_details"
+                                 constraintName="fk_test_run_step_details__step_detail_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_case_field"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="test_run_step_details"
+                                 constraintName="fk_test_run_step_details__status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_status"/>
+    </changeSet>
+</databaseChangeLog>

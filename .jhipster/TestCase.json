@@ -1,0 +1,118 @@
+{
+  "applications": "*",
+  "changelogDate": "20230427132525",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "test_case",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "estimate",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "precondition",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "65535"
+    },
+    {
+      "fieldName": "isAutomated",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TestCase",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "testSuite",
+      "otherEntityRelationshipName": "testcaseTestsuite",
+      "relationshipName": "testSuite",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "section",
+      "otherEntityRelationshipName": "testcaseSection",
+      "relationshipName": "section",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "testCasePriority",
+      "otherEntityRelationshipName": "testcasePriority",
+      "relationshipName": "priority",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "template",
+      "otherEntityRelationshipName": "testcaseTemplate",
+      "relationshipName": "template",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "milestone",
+      "otherEntityRelationshipName": "testcaseMilestone",
+      "relationshipName": "milestone",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testLevel",
+      "otherEntityRelationshipName": "testCase",
+      "ownerSide": true,
+      "relationshipName": "testLevel",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "testCaseAttachment",
+      "otherEntityRelationshipName": "testCase",
+      "relationshipName": "testcaseattachmentTestcase",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testCaseField",
+      "otherEntityRelationshipName": "testCase",
+      "relationshipName": "testcasefieldTestcase",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "testRunDetails",
+      "otherEntityRelationshipName": "testCase",
+      "relationshipName": "testrundetailsTestcase",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

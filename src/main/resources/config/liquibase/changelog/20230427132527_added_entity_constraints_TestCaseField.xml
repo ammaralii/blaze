@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestCaseField.
+    -->
+    <changeSet id="20230427132527-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="template_field_id"
+                                 baseTableName="test_case_field"
+                                 constraintName="fk_test_case_field__template_field_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template_field"/>
+
+        <addForeignKeyConstraint baseColumnNames="test_case_id"
+                                 baseTableName="test_case_field"
+                                 constraintName="fk_test_case_field__test_case_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_case"/>
+    </changeSet>
+</databaseChangeLog>

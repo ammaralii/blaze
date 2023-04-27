@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestRun.
+    -->
+    <changeSet id="20230427132532-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="test_level_id"
+                                 baseTableName="test_run"
+                                 constraintName="fk_test_run__test_level_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_level"/>
+
+        <addForeignKeyConstraint baseColumnNames="mile_stone_id"
+                                 baseTableName="test_run"
+                                 constraintName="fk_test_run__mile_stone_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="milestone"/>
+    </changeSet>
+</databaseChangeLog>

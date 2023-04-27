@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TemplateField.
+    -->
+    <changeSet id="20230427132523-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="company_id"
+                                 baseTableName="template_field"
+                                 constraintName="fk_template_field__company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="template_field_type_id"
+                                 baseTableName="template_field"
+                                 constraintName="fk_template_field__template_field_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template_field_type"/>
+    </changeSet>
+</databaseChangeLog>
